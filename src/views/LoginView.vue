@@ -18,9 +18,9 @@
           <br />
           <label for="password">Password</label>
           <br />
-          <input type="text" name="" id="" />
+          <input type="password" name="" id="" />
           <div id="forgot">
-            <router-link :to="{ name: 'forgot' }" class="yell"
+            <router-link :to="{ name: 'Forgot Password' }" class="yell"
               >Forgot Password</router-link
             >
           </div>
@@ -30,7 +30,7 @@
           </div>
           <div class="signup">
             Don't have account ?&nbsp;
-            <router-link :to="{ name: 'signup' }" class="yell"
+            <router-link :to="{ name: 'Sign Up' }" class="yell"
               >Sign Up</router-link
             >
           </div>

@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 <template>
   <div class="Login_container">
     <div id="box_container">
@@ -22,7 +20,9 @@
           <br />
           <br />
           <div class="login__input">
-            <button class="loginbtn">Sign Up</button>
+            <router-link :to="{ name: 'Enter Password' }" class="yell">
+              <button class="loginbtn">Sign Up</button></router-link
+            >
           </div>
           <div class="signup">
             Don't have account ?&nbsp;

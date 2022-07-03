@@ -5,7 +5,7 @@
     <div id="box_container">
       <!-- login-arrow  -->
       <div class="login-arrow" @click="back">
-        <i class="fas fa-arrow-left"></i> &nbsp; Reset Password
+        <i class="fas fa-arrow-left"></i> &nbsp; Enter Password
       </div>
       <br />
       <!-- form start from here -->
@@ -22,7 +22,7 @@
           <br />
           <br />
           <div class="login__input">
-            <router-link :to="{ name: 'Otp Verification' }" class="yell">
+            <router-link :to="{ name: 'Other  Information' }" class="yell">
               <button class="loginbtn">Next</button></router-link
             >
           </div>
@@ -33,7 +33,7 @@
 </template>
 <script>
 export default {
-  name: "LoginView",
+  name: "EnterPassword",
   methods: {
     back() {
       this.$router.go(-1);

@@ -65,3 +65,10 @@ input[type="text"] {
     height: 90vh;
   }
 }
+.code-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}

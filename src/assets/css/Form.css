@@ -1,6 +1,6 @@
 .Login_container {
-  background-color: #fca704;
-  height: 100vh;
+  background-color: white;
+  height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,8 +9,8 @@
   background-color: white;
   padding: 3em 2em;
   width: 100%;
-  height: 100vh;
   font-weight: 500;
+  height: 100vh;
 }
 .login-arrow {
   margin-bottom: 30px;
@@ -62,7 +62,14 @@ input[type="text"] {
 @media (min-width: 768px) {
   #box_container {
     width: 40%;
-    height: 90vh;
+    height: auto;
+  }
+  .Login_container {
+    background-color: #fca704;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .code-input{

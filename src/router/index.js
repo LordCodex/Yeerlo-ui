@@ -5,7 +5,7 @@ import SignUp from "../views/SignUp.vue";
 import NotFound from "../views/NotFound.vue";
 import EnterPassword from "../views/EnterPassword.vue";
 import OtherInfo from "../views/OtherInfo.vue";
-// import OtpVerify from "../views/OtpVerify.vue";
+import OtpVerify from "../views/OtpVerify.vue";
 
 const routes = [
   {
@@ -28,11 +28,11 @@ const routes = [
     name: "Other Information",
     component: OtherInfo,
   },
-  // {
-  //   path: "/otpverify",
-  //   name: "Otp Verification",
-  //   component: OtpVerify,
-  // },
+  {
+    path: "/otpverify",
+    name: "Otp Verification",
+    component: OtpVerify,
+  },
   {
     path: "/enterpassword",
     name: "Enter Password",

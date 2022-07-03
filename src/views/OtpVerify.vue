@@ -1,0 +1,60 @@
+/* eslint-disable */
+
+<template>
+  <div class="Login_container">
+    <div id="box_container">
+      <!-- login-arrow  -->
+      <div class="login-arrow" @click="back">
+        <i class="fas fa-arrow-left"></i> &nbsp; Verification Code
+      </div>
+      <br />
+      <!-- form start from here -->
+      <div class="form">
+        <div class="code-input">
+          <form action="" class="mt-5">
+            <input class="otp" type="text" maxlength="1" />
+            <input class="otp" type="text" maxlength="1" />
+            <input class="otp" type="text" maxlength="1" />
+            <input class="otp" type="text" maxlength="1" />
+          </form>
+        </div>
+        <br />
+        <br />
+        <div class="login__input">
+          <router-link :to="{ name: 'Other Information' }" class="yell">
+            <button class="loginbtn">Confirm Code</button></router-link
+          >
+        </div>
+        <div class="signup">
+          You didn't receive any code ?&nbsp;
+          <router-link :to="{ name: 'Sign Up' }" class="yell"
+            >Resend</router-link
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: "OtpVerify",
+  methods: {
+    back() {
+      this.$router.go(-1);
+    },
+  },
+};
+</script>
+<style scoped>
+@import "../assets/css/Form.css";
+.mt-5 {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.otp {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+</style>

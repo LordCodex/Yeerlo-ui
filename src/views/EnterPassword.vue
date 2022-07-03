@@ -22,7 +22,7 @@
           <br />
           <br />
           <div class="login__input">
-            <router-link :to="{ name: 'Other  Information' }" class="yell">
+            <router-link :to="{ name: 'Other Information' }" class="yell">
               <button class="loginbtn">Next</button></router-link
             >
           </div>

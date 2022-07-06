@@ -8,6 +8,7 @@
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
 #app {
 }
 * {
@@ -16,7 +17,6 @@
   text-decoration: none;
   box-sizing: border-box;
   list-style-type: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Urbanist;
 }
 </style>

@@ -1,17 +1,19 @@
 /* eslint-disable */
 
 <template>
-  <div class="Splash_container grid">
-    <div class="Splashbox__container__column--one">
-      <img src="../assets/img/logo-mobile.png" alt="" />
+  <router-link :to="{ name: 'Onboard One' }" class="yell">
+    <div class="Splash_container grid">
+      <div class="Splashbox__container__column--one">
+        <img src="../assets/img/logo-mobile.png" alt="" />
+      </div>
+      <div class="logo">
+        <img src="../assets/img/logo.png" alt="" />
+      </div>
+      <div class="Splashbox__container__column--two">
+        <img src="../assets/img/logo-mobile.png" alt="" />
+      </div>
     </div>
-    <div class="logo">
-      <img src="../assets/img/logo.png" alt="" />
-    </div>
-    <div class="Splashbox__container__column--two">
-      <img src="../assets/img/logo-mobile.png" alt="" />
-    </div>
-  </div>
+  </router-link>
 </template>
 <script>
 export default {

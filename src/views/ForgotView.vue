@@ -4,8 +4,9 @@
   <div class="Login_container">
     <div id="box_container">
       <!-- login-arrow  -->
-      <div class="login-arrow" @click="back">
-        <i class="fas fa-arrow-left"></i> &nbsp; Reset Password
+      <div class="login-arrow">
+        <h2 class="loghead">Reset Password</h2>
+        <p>Reset Your Password.</p>
       </div>
       <br />
       <!-- form start from here -->

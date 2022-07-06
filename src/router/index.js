@@ -7,12 +7,30 @@ import EnterPassword from "../views/EnterPassword.vue";
 import OtherInfo from "../views/OtherInfo.vue";
 import OtpVerify from "../views/OtpVerify.vue";
 import SplashScreen from "../views/SplashScreen.vue";
+import OnboardOne from "../views/OnboardOne.vue";
+import OnboardTwo from "../views/OnboardTwo.vue";
+import OnboardThree from "../views/OnboardThree.vue";
 
 const routes = [
   {
     path: "/",
     name: "Splash Screen",
     component: SplashScreen,
+  },
+  {
+    path: "/onboardone",
+    name: "Onboard One",
+    component: OnboardOne,
+  },
+  {
+    path: "/onboardtwo",
+    name: "Onboard Two",
+    component: OnboardTwo,
+  },
+  {
+    path: "/onboardthree",
+    name: "Onboard Three",
+    component: OnboardThree,
   },
   {
     path: "/login",

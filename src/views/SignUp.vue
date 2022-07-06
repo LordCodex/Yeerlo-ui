@@ -1,9 +1,12 @@
+/* eslint-disable */
+
 <template>
   <div class="Login_container">
     <div id="box_container">
       <!-- login-arrow  -->
-      <div class="login-arrow" @click="back">
-        <i class="fas fa-arrow-left"></i> &nbsp; Sign Up
+      <div class="login-arrow">
+        <h2 class="loghead">Sign Up</h2>
+        <p>Sign up to get your account.</p>
       </div>
       <br />
       <!-- form start from here -->
@@ -11,23 +14,29 @@
         <form action="" method="post">
           <label for="Name">Name</label>
           <br />
-          <input type="text" name="" id="" />
+          <input type="Name" name="" id="" />
           <br />
           <br />
-          <label for="Email">Email</label>
+          <label for="password">Password</label>
           <br />
-          <input type="text" name="" id="" />
-          <br />
+          <input type="password" name="" id="" />
           <br />
           <div class="login__input">
-            <router-link :to="{ name: 'Enter Password' }" class="yell">
-              <button class="loginbtn">Sign Up</button></router-link
-            >
+            <button class="loginbtn">Sign Up</button>
+          </div>
+          <div class="signup with_account">or sign up with account</div>
+          <div class="signup accounts">
+            <button class="social">
+              <i class="fab fa-google"></i>&nbsp; Google
+            </button>
+            <button class="social">
+              <i class="fab fa-facebook"></i>&nbsp; Facebook
+            </button>
           </div>
           <div class="signup">
-            Don't have account ?&nbsp;
+            Already have an account ?&nbsp;
             <router-link :to="{ name: 'login' }" class="yell"
-              >Sign In</router-link
+              >Login</router-link
             >
           </div>
         </form>
@@ -37,12 +46,7 @@
 </template>
 <script>
 export default {
-  name: "SignUp",
-  methods: {
-    back() {
-      this.$router.go(-1);
-    },
-  },
+  name: "LoginView",
 };
 </script>
 <style scoped>

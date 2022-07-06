@@ -3,9 +3,9 @@
 <template>
   <div class="Login_container">
     <div id="box_container">
-      <!-- login-arrow  -->
-      <div class="login-arrow" @click="back">
-        <i class="fas fa-arrow-left"></i> &nbsp; Verification Code
+      <div class="login-arrow">
+        <h2 class="loghead">Verification Code</h2>
+        <p>Verification code have been sent to your email.</p>
       </div>
       <br />
       <!-- form start from here -->
@@ -21,13 +21,13 @@
         <br />
         <br />
         <div class="login__input">
-          <router-link :to="{ name: 'Other Information' }" class="yell">
+          <router-link :to="{ name: 'Splash Screen' }" class="yell">
             <button class="loginbtn">Confirm Code</button></router-link
           >
         </div>
         <div class="signup">
           You didn't receive any code ?&nbsp;
-          <router-link :to="{ name: 'Sign Up' }" class="yell"
+          <router-link :to="{ name: 'Splash Screen' }" class="yell"
             >Resend</router-link
           >
         </div>

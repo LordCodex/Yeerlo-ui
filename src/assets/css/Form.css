@@ -1,12 +1,14 @@
 .Login_container {
-  background-color: white;
   height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 #box_container {
-  background-color: white;
+  background:url('../img/back.png'), url('../img/back.png');
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: top right, bottom right;
   padding: 3em 2em;
   width: 100%;
   font-weight: 500;
@@ -16,9 +18,11 @@
   margin-bottom: 30px;
   font-size: 19px;
   cursor: pointer;
+  color: #192252;
 }
 label {
   text-align: start;
+  color: #192252;
 }
 input {
   width: 100%;
@@ -45,24 +49,46 @@ button {
   margin: 1em 0;
   cursor: pointer;
 }
-input[type="text"] {
-  background-color: #f6f6f6;
-  color: black;
+input[type="text"],input[type="number"],input[type="password"],input[type="email"] {
+  background-color: white;
+  color: #606D93;
 }
 .signup {
   text-align: center;
+  color: #848FAC;
+  padding: .5em 0;
+}
+.accounts {
+  display: flex;
+  gap: 1.5em;
+}
+.fa-google {
+  color: #ea4335;
+}
+.fa-facebook{
+  color: #4267B2;
 }
 .loginbtn {
   font-size: 17px;
 }
+.social{
+  background-color: white;
+  border: 1px solid #848FAC;
+  color: #848FAC;
+}
 .yell {
   color: #f06723;
+}
+.login-arrow p {
+  margin: .5em 0;
+  color: #848fac;
 }
 
 @media (min-width: 768px) {
   #box_container {
     width: 40%;
     height: auto;
+    background-color: white;
   }
   .Login_container {
     background-color: #f06723;

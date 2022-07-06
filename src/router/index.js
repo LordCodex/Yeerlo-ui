@@ -6,10 +6,16 @@ import NotFound from "../views/NotFound.vue";
 import EnterPassword from "../views/EnterPassword.vue";
 import OtherInfo from "../views/OtherInfo.vue";
 import OtpVerify from "../views/OtpVerify.vue";
+import SplashScreen from "../views/SplashScreen.vue";
 
 const routes = [
   {
     path: "/",
+    name: "Splash Screen",
+    component: SplashScreen,
+  },
+  {
+    path: "/login",
     name: "login",
     component: LoginView,
   },

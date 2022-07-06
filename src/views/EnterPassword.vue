@@ -4,8 +4,9 @@
   <div class="Login_container">
     <div id="box_container">
       <!-- login-arrow  -->
-      <div class="login-arrow" @click="back">
-        <i class="fas fa-arrow-left"></i> &nbsp; Enter Password
+      <div class="login-arrow">
+        <h2 class="loghead">Enter Password</h2>
+        <p>Enter Your New Password.</p>
       </div>
       <br />
       <!-- form start from here -->
@@ -22,7 +23,7 @@
           <br />
           <br />
           <div class="login__input">
-            <router-link :to="{ name: 'Other Information' }" class="yell">
+            <router-link :to="{ name: 'Success Page' }" class="yell">
               <button class="loginbtn">Next</button></router-link
             >
           </div>

@@ -17,12 +17,14 @@
           <input type="Name" name="" id="" />
           <br />
           <br />
-          <label for="password">Password</label>
+          <label for="Email">Your Email</label>
           <br />
-          <input type="password" name="" id="" />
+          <input type="email" name="" id="" />
           <br />
           <div class="login__input">
-            <button class="loginbtn">Sign Up</button>
+            <router-link :to="{ name: 'Enter Password' }" class="yell">
+              <button class="loginbtn">Sign Up</button>
+            </router-link>
           </div>
           <div class="signup with_account">or sign up with account</div>
           <div class="signup accounts">

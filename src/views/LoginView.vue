@@ -27,7 +27,9 @@
           </div>
           <br />
           <div class="login__input">
-            <button class="loginbtn">Login</button>
+            <router-link :to="{ name: 'Dashboard' }" class="yell">
+              <button class="loginbtn">Login</button>
+            </router-link>
           </div>
           <div class="signup with_account">or login with account</div>
           <div class="signup accounts">

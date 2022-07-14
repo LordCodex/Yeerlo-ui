@@ -77,6 +77,53 @@
         <p>Storage Capacity</p>
       </div>
     </div>
+    <div class="event__convention__container">
+      <h2 style="color: #465793c4; margin: 1em 0">Top Event Conversion</h2>
+      <div class="event__convention__list__container">
+        <div class="event_box">
+          <div class="events">
+            <div class="event__image">
+              <img src="../assets/img/slide_1.jpg" alt="" />
+            </div>
+            <div class="event__details">
+              <h3>Laff Off Season 1</h3>
+              <h4 style="color: #07bb4f">₦6500.06 Earned</h4>
+              <h5 style="color: #0738bb">2 Ticket Sold</h5>
+            </div>
+          </div>
+          <div style="border-bottom: 1px solid #cccccc; margin: 1.5em 0"></div>
+        </div>
+
+        <div class="event_box">
+          <div class="events">
+            <div class="event__image">
+              <img src="../assets/img/slide2.jpg" alt="" />
+            </div>
+            <div class="event__details">
+              <h3>Laff Off Season 2</h3>
+              <h4 style="color: #07bb4f">₦6500.06 Earned</h4>
+              <h5 style="color: #0738bb">3 Ticket Sold</h5>
+            </div>
+          </div>
+          <div style="border-bottom: 1px solid #cccccc; margin: 1.5em 0"></div>
+        </div>
+
+        <div class="event_box">
+          <div class="events">
+            <div class="event__image">
+              <img src="../assets/img/slide_3.jpg" alt="" />
+            </div>
+            <div class="event__details">
+              <h3>Laff Off Season 3</h3>
+              <h4 style="color: #07bb4f">₦6500.06 Earned</h4>
+              <h5 style="color: #0738bb">4 Ticket Sold</h5>
+            </div>
+          </div>
+          <div style="border-bottom: 1px solid #cccccc; margin: 1.5em 0"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="sticky__footer">
       <div class="footer-icons">
         <i class="fas fa-chart-line act"></i>
@@ -177,5 +224,36 @@ export default {
 }
 .act {
   color: #f06723;
+}
+.event__convention__list__container {
+  border: 1px solid #6d7d93;
+  border-radius: 1em;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+.events {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.event__image {
+  border: 1px solid #f06723;
+  border-radius: 2em;
+  object-fit: cover;
+  /* padding: 0.3em; */
+  width: 70.21px;
+  height: 70.21px;
+}
+.event__image img {
+  background-color: #f06723;
+  border-radius: 2em;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.event__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
 }
 </style>

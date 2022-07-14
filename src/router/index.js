@@ -12,6 +12,7 @@ import OnboardTwo from "../views/OnboardTwo.vue";
 import OnboardThree from "../views/OnboardThree.vue";
 import SuccessPage from "../views/SuccessPage.vue";
 import DashboardView from "../views/DashboardView.vue";
+import ChartView from "../components/ChartView.vue";
 
 const routes = [
   {
@@ -68,6 +69,11 @@ const routes = [
     path: "/dashboard",
     name: "Dashboard",
     component: DashboardView,
+  },
+  {
+    path: "/chart",
+    name: "Dashboard chart",
+    component: ChartView,
   },
   {
     path: "/success",

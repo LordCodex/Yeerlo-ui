@@ -77,6 +77,14 @@
         <p>Storage Capacity</p>
       </div>
     </div>
+
+    <div class="event__convention__container">
+      <h2 style="color: #465793c4; margin: 1em 0">Monthly Earnings</h2>
+      <div class="event__convention__list__container">
+        <div><ChartView /></div>
+      </div>
+    </div>
+
     <div class="event__convention__container">
       <h2 style="color: #465793c4; margin: 1em 0">Top Event Conversion</h2>
       <div class="event__convention__list__container">
@@ -143,8 +151,10 @@
 </template>
 
 <script>
+import ChartView from "../components/ChartView.vue";
 export default {
   name: "DashboardView",
+  components: { ChartView },
 };
 </script>
 

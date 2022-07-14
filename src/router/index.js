@@ -11,6 +11,7 @@ import OnboardOne from "../views/OnboardOne.vue";
 import OnboardTwo from "../views/OnboardTwo.vue";
 import OnboardThree from "../views/OnboardThree.vue";
 import SuccessPage from "../views/SuccessPage.vue";
+import DashboardView from "../views/DashboardView.vue";
 
 const routes = [
   {
@@ -62,6 +63,11 @@ const routes = [
     path: "/enterpassword",
     name: "Enter Password",
     component: EnterPassword,
+  },
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    component: DashboardView,
   },
   {
     path: "/success",

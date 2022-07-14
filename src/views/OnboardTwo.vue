@@ -23,7 +23,7 @@
           <br />
           <br />
           <router-link :to="{ name: 'Onboard Three' }" class="yell">
-            <button class="getstarted">Get Started</button>
+            <button class="getstarted">Continue</button>
           </router-link>
         </div>
       </div>

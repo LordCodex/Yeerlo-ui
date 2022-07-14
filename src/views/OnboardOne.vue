@@ -21,7 +21,7 @@
             need to create the next big event!
           </p>
           <router-link :to="{ name: 'Onboard Two' }" class="yell">
-            <button class="getstarted">Get Started</button>
+            <button class="getstarted">Continue</button>
           </router-link>
         </div>
       </div>

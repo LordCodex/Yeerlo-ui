@@ -20,11 +20,9 @@
             Organising your events shouldn’t be hectic and time consuming. Get
             things done faster with the speed of Yeerlo vendors.
           </p>
-          <router-link :to="{ name: 'login' }" class="yell">
-            <button class="getstarted">Login</button>
-          </router-link>
+          <br />
           <router-link :to="{ name: 'Sign Up' }" class="yell">
-            <button class="getstartedtwo">Sign Up</button>
+            <button class="getstarted">Get Started</button>
           </router-link>
         </div>
       </div>

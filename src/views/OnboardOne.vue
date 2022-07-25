@@ -12,6 +12,7 @@
         <span class="dot" style="background-color: #f06723"></span>
         <span class="dot"></span>
         <span class="dot"></span>
+        <span class="dot"></span>
       </div>
       <div class="Onboarding__Container__Column--three">
         <div class="Onboarding__text">

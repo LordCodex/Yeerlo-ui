@@ -1,0 +1,6 @@
+{
+  "appId": "com.yeerloplus.app",
+  "appName": "Yeerlo Plus",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

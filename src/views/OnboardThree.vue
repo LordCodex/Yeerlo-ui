@@ -12,6 +12,7 @@
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot" style="background-color: #f06723"></span>
+        <span class="dot"></span>
       </div>
       <div class="Onboarding__Container__Column--three">
         <div class="Onboarding__text">
@@ -21,8 +22,8 @@
             things done faster with the speed of Yeerlo vendors.
           </p>
           <br />
-          <router-link :to="{ name: 'Sign Up' }" class="yell">
-            <button class="getstarted">Get Started</button>
+          <router-link :to="{ name: 'Onboard Four' }" class="yell">
+            <button class="getstarted">Continue</button>
           </router-link>
         </div>
       </div>

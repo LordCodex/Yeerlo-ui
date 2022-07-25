@@ -18,6 +18,9 @@
 <script>
 export default {
   name: "SplashScreen",
+  created() {
+    setTimeout(() => this.$router.push({ path: "/onboardone" }), 3000);
+  },
 };
 </script>
 <style scoped>

@@ -2,7 +2,7 @@
   <div>
     <div class="Onborarding__Container">
       <div class="Onboarding__Container__Column--one">
-        <img src="../assets/img/slide2.jpg" alt="" />
+        <img src="../assets/img/live_stream.jpg" alt="" />
       </div>
 
       <div
@@ -10,21 +10,21 @@
         style="text-align: center"
       >
         <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
         <span class="dot" style="background-color: #f06723"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
       </div>
       <div class="Onboarding__Container__Column--three">
         <div class="Onboarding__text">
-          <h1>Easy Ticketing</h1>
+          <h1>Live Stream For Wider Reach</h1>
           <p>
-            Create free or paid tickets for your events and watch your ticket
-            sales as they roll-in in real-time.
+            Reach more audience for your events with world-class live streaming
+            services. There are a thousand and one viewers hoping to watch live!
           </p>
           <br />
           <br />
-          <router-link :to="{ name: 'Onboard Three' }" class="yell">
-            <button class="getstarted">Continue</button>
+          <router-link :to="{ name: 'Sign Up' }" class="yell">
+            <button class="getstarted">Get Started</button>
           </router-link>
         </div>
       </div>
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: "OnboardTwo",
+  name: "OnboardFour",
 };
 </script>
 

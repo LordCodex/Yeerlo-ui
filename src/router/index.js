@@ -6,10 +6,10 @@ import NotFound from "../views/NotFound.vue";
 import EnterPassword from "../views/EnterPassword.vue";
 import OtherInfo from "../views/OtherInfo.vue";
 import OtpVerify from "../views/OtpVerify.vue";
-import SplashScreen from "../views/SplashScreen.vue";
 import OnboardOne from "../views/OnboardOne.vue";
 import OnboardTwo from "../views/OnboardTwo.vue";
 import OnboardThree from "../views/OnboardThree.vue";
+import OnboardFour from "../views/OnboardFour.vue";
 import SuccessPage from "../views/SuccessPage.vue";
 import DashboardView from "../views/DashboardView.vue";
 import ChartView from "../components/ChartView.vue";
@@ -17,11 +17,6 @@ import ChartView from "../components/ChartView.vue";
 const routes = [
   {
     path: "/",
-    name: "Splash Screen",
-    component: SplashScreen,
-  },
-  {
-    path: "/onboardone",
     name: "Onboard One",
     component: OnboardOne,
   },
@@ -34,6 +29,11 @@ const routes = [
     path: "/onboardthree",
     name: "Onboard Three",
     component: OnboardThree,
+  },
+  {
+    path: "/onboardfour",
+    name: "Onboard Four",
+    component: OnboardFour,
   },
   {
     path: "/login",

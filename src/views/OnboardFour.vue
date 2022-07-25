@@ -76,7 +76,7 @@ export default {
 }
 .dot {
   height: 5px;
-  width: 50px;
+  width: 40px;
   background-color: #bbb;
   border-radius: 15%;
   display: inline-block;

@@ -2,7 +2,7 @@
   <div>
     <div class="Onborarding__Container">
       <div class="Onboarding__Container__Column--one">
-        <img src="../assets/img/live_stream.jpg" alt="" />
+        <img src="../assets/img/slide6.png" alt="" />
       </div>
 
       <div
@@ -47,7 +47,7 @@ export default {
   background-color: white;
 }
 .Onboarding__Container__Column--one {
-  background-color: #e6c303;
+  background-color: #bf002c;
   height: 50vh;
   width: 100%;
   border-radius: 0 0 0 6em;

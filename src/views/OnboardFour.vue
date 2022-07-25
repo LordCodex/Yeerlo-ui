@@ -73,6 +73,7 @@ export default {
 .Onboarding__text p {
   margin: 1em 0;
   color: #848fac;
+  margin-bottom: -0.5em;
 }
 .dot {
   height: 5px;

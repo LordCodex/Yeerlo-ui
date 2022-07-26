@@ -2,7 +2,7 @@
   <div>
     <div class="Onborarding__Container">
       <div class="Onboarding__Container__Column--one">
-        <img src="../assets/img/slide6.png" alt="" />
+        <img src="../assets/img/slide6-min.png" alt="" />
       </div>
 
       <div

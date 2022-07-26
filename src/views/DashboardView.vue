@@ -149,10 +149,12 @@
         <i class="fas fa-box"></i>
         <p>Event</p>
       </div>
-      <div class="footer-icons">
-        <i class="fas fa-th-large"></i>
-        <p>profile</p>
-      </div>
+      <router-link :to="{ name: 'Menu' }" class="page-link">
+        <div class="footer-icons">
+          <i class="fas fa-th-large"></i>
+          <p>Menu</p>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>

@@ -12,6 +12,7 @@ import OnboardThree from "../views/OnboardThree.vue";
 import OnboardFour from "../views/OnboardFour.vue";
 import SuccessPage from "../views/SuccessPage.vue";
 import DashboardView from "../views/DashboardView.vue";
+import MenuView from "../views/MenuView.vue";
 import ChartView from "../components/ChartView.vue";
 
 const routes = [
@@ -39,6 +40,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: LoginView,
+  },
+  {
+    path: "/menu",
+    name: "Menu",
+    component: MenuView,
   },
   {
     path: "/forgot",

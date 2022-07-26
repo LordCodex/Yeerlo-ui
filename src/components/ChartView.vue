@@ -69,11 +69,24 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ["January", "February", "March"],
+        labels: [
+          "January",
+          "February",
+          "March",
+          "April",
+          "may",
+          "june",
+          "july",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ],
         datasets: [
           {
             label: "Monthly Earnings",
-            data: [40, 20, 100],
+            data: [40, 20, 100, 10, 54, 10, 100, 200, 400, 500, 23, 56],
           },
         ],
       },

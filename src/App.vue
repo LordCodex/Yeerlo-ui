@@ -18,5 +18,9 @@
   box-sizing: border-box;
   list-style-type: none;
   font-family: Urbanist;
+  outline-style: none;
+}
+a {
+  color: black;
 }
 </style>

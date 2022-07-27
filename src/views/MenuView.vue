@@ -5,13 +5,14 @@
     <div class="menu__container">
       <!-- <div class="menu__name"><h3>Menu</h3></div> -->
       <div class="menus">
-        <div class="menu">
-          <div class="menu-text">
-            <i class="fas fa-user icon"></i> &nbsp; Profile
+        <router-link :to="{ name: 'My Profile' }" class="page-link">
+          <div class="menu">
+            <div class="menu-text">
+              <i class="fas fa-user icon"></i> &nbsp; Profile
+            </div>
+            <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
           </div>
-          <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
-        </div>
-
+        </router-link>
         <div class="menu">
           <div class="menu-text">
             <i class="fas fa-swatchbook icon"></i> &nbsp; My Page

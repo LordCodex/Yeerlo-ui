@@ -13,6 +13,7 @@ import OnboardFour from "../views/OnboardFour.vue";
 import SuccessPage from "../views/SuccessPage.vue";
 import DashboardView from "../views/DashboardView.vue";
 import MenuView from "../views/MenuView.vue";
+import MyProfile from "../views/MyProfile.vue";
 import ChartView from "../components/ChartView.vue";
 
 const routes = [
@@ -70,6 +71,11 @@ const routes = [
     path: "/enterpassword",
     name: "Enter Password",
     component: EnterPassword,
+  },
+  {
+    path: "/profile",
+    name: "My Profile",
+    component: MyProfile,
   },
   {
     path: "/dashboard",

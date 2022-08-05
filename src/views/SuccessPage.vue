@@ -6,7 +6,7 @@
       <br />
       <!-- form start from here -->
       <div class="form">
-        <img src="../assets/img/mark.png" alt="" />
+        <div class="img_check"><img src="../assets/img/mark.png" alt="" /></div>
         <p>You've successfully setup your Yeerlo account.</p>
         <button>Continue</button>
       </div>
@@ -31,5 +31,8 @@ export default {
 button {
   background-color: white;
   color: #f06723;
+}
+.img_check img {
+  width: 50%;
 }
 </style>

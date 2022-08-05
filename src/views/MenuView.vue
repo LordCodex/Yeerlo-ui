@@ -13,12 +13,14 @@
             <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
           </div>
         </router-link>
-        <div class="menu">
-          <div class="menu-text">
-            <i class="fas fa-swatchbook icon"></i> &nbsp; My Page
+        <router-link :to="{ name: 'My Page' }" class="page-link">
+          <div class="menu">
+            <div class="menu-text">
+              <i class="fas fa-swatchbook icon"></i> &nbsp; My Page
+            </div>
+            <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
           </div>
-          <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
-        </div>
+        </router-link>
 
         <div class="menu">
           <div class="menu-text">
@@ -90,13 +92,12 @@ export default {
 </script>
 <style scoped>
 .menu__container__box {
-  height: 100vh;
   background-color: white;
 }
 .menu__container {
   width: 100%;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 2.5em auto;
 }
 /* .menu__name {
   margin: 1.5em 0;

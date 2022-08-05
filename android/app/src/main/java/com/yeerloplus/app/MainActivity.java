@@ -1,4 +1,4 @@
-package com.yeerlocreator.app;
+package com.yeerloplus.app;
 
 import com.getcapacitor.BridgeActivity;
 

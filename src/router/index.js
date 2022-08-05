@@ -14,6 +14,7 @@ import SuccessPage from "../views/SuccessPage.vue";
 import DashboardView from "../views/DashboardView.vue";
 import MenuView from "../views/MenuView.vue";
 import MyProfile from "../views/MyProfile.vue";
+import MyPage from "../views/MyPage.vue";
 import ChartView from "../components/ChartView.vue";
 
 const routes = [
@@ -76,6 +77,11 @@ const routes = [
     path: "/profile",
     name: "My Profile",
     component: MyProfile,
+  },
+  {
+    path: "/mypage",
+    name: "My Page",
+    component: MyPage,
   },
   {
     path: "/dashboard",

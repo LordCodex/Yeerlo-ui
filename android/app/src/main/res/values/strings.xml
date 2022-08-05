@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Yeerlo Creator</string>
-    <string name="title_activity_main">Yeerlo Creator</string>
-    <string name="package_name">com.yeerlocreator.app</string>
-    <string name="custom_url_scheme">com.yeerlocreator.app</string>
+    <string name="app_name">Yeerlo Plus</string>
+    <string name="title_activity_main">Yeerlo Plus</string>
+    <string name="package_name">com.yeerloplus.app</string>
+    <string name="custom_url_scheme">com.yeerloplus.app</string>
 </resources>

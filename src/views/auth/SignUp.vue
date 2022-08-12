@@ -11,25 +11,23 @@
       <br />
       <!-- form start from here -->
       <div class="form">
-        <form action="" method="post">
+        <form @submit.prevent="handleSubmit">
           <label for="Name">Name</label>
           <br />
-          <input type="Name" name="" id="" />
+          <input type="Name" v-model="name" id="name" />
           <br />
           <br />
           <label for="Email">Your Email</label>
           <br />
-          <input type="email" name="" id="" />
+          <input type="email" v-model="email" id="email" />
           <br />
           <br />
           <label for="Password">Password</label>
           <br />
-          <input type="password" name="" id="" />
+          <input type="password" v-model="password" id="password" />
           <br />
           <div class="login__input">
-            <router-link :to="{ name: 'Otp Verification' }" class="yell">
-              <button class="loginbtn">Sign Up</button>
-            </router-link>
+            <button class="loginbtn">Sign Up</button>
           </div>
           <div class="signup with_account">or sign up with account</div>
           <div class="signup accounts">
@@ -52,8 +50,33 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   name: "LoginView",
+  data() {
+    return {
+      name: "",
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    handleSubmit() {
+      const data = {
+        name: this.name,
+        email: this.email,
+        password: this.password,
+      };
+      axios
+        .post("https://live.yeerlo.com/api/auth", data)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
 };
 </script>
 <style scoped>

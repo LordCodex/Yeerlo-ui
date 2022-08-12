@@ -80,16 +80,18 @@ export default {
 .menus {
   display: flex;
   flex-direction: column;
-  gap: 0.8em;
-  margin: 1em 0;
+  /* gap: 0.8em;
+  margin: 1em 0; */
+  margin-top: 1em;
 }
 .menu {
-  padding: 1.5em;
+  padding: 1.3em;
   background: #d9d9d92e;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 17px;
+  margin-bottom: 20px;
 }
 .icon {
   color: #f06723;

@@ -21,8 +21,13 @@
           <br />
           <input type="email" name="" id="" />
           <br />
+          <br />
+          <label for="Password">Password</label>
+          <br />
+          <input type="password" name="" id="" />
+          <br />
           <div class="login__input">
-            <router-link :to="{ name: 'Enter Password' }" class="yell">
+            <router-link :to="{ name: 'Otp Verification' }" class="yell">
               <button class="loginbtn">Sign Up</button>
             </router-link>
           </div>
@@ -52,5 +57,5 @@ export default {
 };
 </script>
 <style scoped>
-@import "../assets/css/Form.css";
+@import "../../assets/css/Form.css";
 </style>

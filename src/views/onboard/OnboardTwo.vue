@@ -2,7 +2,7 @@
   <div>
     <div class="Onborarding__Container">
       <div class="Onboarding__Container__Column--one">
-        <img src="../assets/img/slide_3.jpg" alt="" />
+        <img src="../../assets/img/slide2.jpg" alt="" />
       </div>
 
       <div
@@ -10,19 +10,20 @@
         style="text-align: center"
       >
         <span class="dot"></span>
-        <span class="dot"></span>
         <span class="dot" style="background-color: #f06723"></span>
+        <span class="dot"></span>
         <span class="dot"></span>
       </div>
       <div class="Onboarding__Container__Column--three">
         <div class="Onboarding__text">
-          <h1>Leverage Yeerlo Vendors</h1>
+          <h1>Easy Ticketing</h1>
           <p>
-            Organising your events shouldn’t be hectic and time consuming. Get
-            things done faster with the speed of Yeerlo vendors.
+            Create free or paid tickets for your events and watch your ticket
+            sales as they roll-in in real-time.
           </p>
           <br />
-          <router-link :to="{ name: 'Onboard Four' }" class="yell">
+          <br />
+          <router-link :to="{ name: 'Onboard Three' }" class="yell">
             <button class="getstarted">Continue</button>
           </router-link>
         </div>
@@ -33,7 +34,7 @@
 
 <script>
 export default {
-  name: "OnboardThree",
+  name: "OnboardTwo",
 };
 </script>
 
@@ -46,7 +47,7 @@ export default {
   background-color: white;
 }
 .Onboarding__Container__Column--one {
-  background-color: #222931;
+  background-color: #e6c303;
   height: 50vh;
   width: 100%;
   border-radius: 0 0 0 6em;
@@ -84,11 +85,5 @@ export default {
   display: flex;
   gap: 0.5em;
   padding: 1em;
-}
-.getstartedtwo {
-  background-color: black;
-  border: 1px solid black;
-  font-size: 16px;
-  margin: 0;
 }
 </style>

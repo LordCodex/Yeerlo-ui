@@ -2,29 +2,27 @@
   <div>
     <div class="Onborarding__Container">
       <div class="Onboarding__Container__Column--one">
-        <img src="../assets/img/slide6-min.png" alt="" />
+        <img src="../../assets/img/slide_1.jpg" alt="" />
       </div>
 
       <div
         class="Onboarding__Container__Column--two"
         style="text-align: center"
       >
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
         <span class="dot" style="background-color: #f06723"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
       <div class="Onboarding__Container__Column--three">
         <div class="Onboarding__text">
-          <h1>Live Stream For Wider Reach</h1>
+          <h1>Event Management, Made Easy</h1>
           <p>
-            Reach more audience for your events with world-class live streaming
-            services. There are a thousand and one viewers hoping to watch live!
+            Create, Manage and share your events with ease. Yeerlo has all you
+            need to create the next big event!
           </p>
-          <br />
-          <br />
-          <router-link :to="{ name: 'Sign Up' }" class="yell">
-            <button class="getstarted">Get Started</button>
+          <router-link :to="{ name: 'Onboard Two' }" class="yell">
+            <button class="getstarted">Continue</button>
           </router-link>
         </div>
       </div>
@@ -34,7 +32,7 @@
 
 <script>
 export default {
-  name: "OnboardFour",
+  name: "OnboardOne",
 };
 </script>
 
@@ -47,7 +45,7 @@ export default {
   background-color: white;
 }
 .Onboarding__Container__Column--one {
-  background-color: #bf002c;
+  background-color: #382b23;
   height: 50vh;
   width: 100%;
   border-radius: 0 0 0 6em;
@@ -73,7 +71,6 @@ export default {
 .Onboarding__text p {
   margin: 1em 0;
   color: #848fac;
-  margin-bottom: -0.5em;
 }
 .dot {
   height: 5px;

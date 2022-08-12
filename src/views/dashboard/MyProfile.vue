@@ -5,55 +5,57 @@
     <div class="menu__container">
       <div class="menu__name">
         <h3>
-          <a @click="back()" class="menu_title"
-            ><i class="fas fa-arrow-left"></i
-          ></a>
-          &nbsp;My page
+          <a @click="back()"><i class="fas fa-arrow-left"></i></a>
+          &nbsp;Profile
         </h3>
-        <div class="circle-buttons">
-          <div class="circle-button"></div>
-          <div class="circle-button"></div>
-          <div class="circle-button" style="background-color: #07bb4f"></div>
-        </div>
-      </div>
-      <div class="menu-top__text">
-        Setup and customize your display page to view demo of your un-saved page
-        customization, cliick the button above.for live mode ( i.e saved
-        customization), use click button
+        <p style="margin-left: 2em; margin-top: 0.2em; margin-bottom: 2em">
+          My profile page
+        </p>
       </div>
       <div class="menus">
-        <div class="menu">
-          <div class="menu-text">Basic Info</div>
-          <i class="fas fa-plus"></i>
+        <div class="menu-icon" id="open-sheet" aria-controls="sheet">
+          <div class="menu">
+            <div class="menu-text">Edit Profile</div>
+            <i class="fas fa-plus"></i>
+          </div>
         </div>
 
         <div class="menu">
-          <div class="menu-text">Media Resource</div>
+          <div class="menu-text">Social Profile</div>
           <div class="menu-icon"><i class="fas fa-plus"></i></div>
         </div>
 
         <div class="menu">
-          <div class="menu-text">Gallery</div>
+          <div class="menu-text">Account Setting</div>
           <div class="menu-icon"><i class="fas fa-plus"></i></div>
         </div>
 
         <div class="menu">
-          <div class="menu-text">Events</div>
+          <div class="menu-text">Currency</div>
           <div class="menu-icon"><i class="fas fa-plus"></i></div>
         </div>
 
         <div class="menu">
-          <div class="menu-text">Sponsors</div>
+          <div class="menu-text">Security 2fa</div>
+          <div class="menu-icon"><i class="fas fa-plus"></i></div>
+        </div>
+
+        <div class="menu">
+          <div class="menu-text">Trasaction Pin</div>
+          <div class="menu-icon"><i class="fas fa-plus"></i></div>
+        </div>
+
+        <div class="menu">
+          <div class="menu-text">Withdraw Info</div>
           <div class="menu-icon"><i class="fas fa-plus"></i></div>
         </div>
       </div>
-      <button class="loginbtn">Save Changes</button>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "MyPage",
+  name: "MyProfile",
   methods: {
     back() {
       this.$router.go(-1);
@@ -62,8 +64,6 @@ export default {
 };
 </script>
 <style scoped>
-@import "../assets/css/Bottomsheet.css";
-@import "../assets/css/bottommain.css";
 .menu__container__box {
   /* height: 100vh; */
   background-color: white;
@@ -95,23 +95,5 @@ export default {
 }
 .icon {
   color: #f06723;
-}
-.menu__name {
-  display: flex;
-  justify-content: space-between;
-}
-.circle-buttons {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-.circle-button {
-  height: 25px;
-  width: 25px;
-  background-color: #f06723;
-  border-radius: 50%;
-}
-.menu-top__text {
-  margin: 2.5em 0;
 }
 </style>

@@ -6,9 +6,13 @@
       <br />
       <!-- form start from here -->
       <div class="form">
-        <div class="img_check"><img src="../assets/img/mark.png" alt="" /></div>
+        <div class="img_check">
+          <img src="../../assets/img/mark.png" alt="" />
+        </div>
         <p>You've successfully setup your Yeerlo account.</p>
-        <button>Continue</button>
+        <router-link :to="{ name: 'login' }" class="yell">
+          <button>Continue</button>
+        </router-link>
       </div>
     </div>
   </div>
@@ -19,7 +23,7 @@ export default {
 };
 </script>
 <style scoped>
-@import "../assets/css/Form.css";
+@import "../../assets/css/Form.css";
 .form {
   text-align: center;
   display: flex;
@@ -31,6 +35,8 @@ export default {
 button {
   background-color: white;
   color: #f06723;
+  font-size: 16px;
+  padding: 1em 8em;
 }
 .img_check img {
   width: 50%;

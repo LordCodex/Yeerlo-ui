@@ -57,5 +57,5 @@ export default {
 };
 </script>
 <style scoped>
-@import "../assets/css/Form.css";
+@import "../../assets/css/Form.css";
 </style>

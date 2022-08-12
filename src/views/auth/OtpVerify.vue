@@ -16,18 +16,20 @@
             <input class="otp" type="text" maxlength="1" />
             <input class="otp" type="text" maxlength="1" />
             <input class="otp" type="text" maxlength="1" />
+            <input class="otp" type="text" maxlength="1" />
+            <input class="otp" type="text" maxlength="1" />
           </form>
         </div>
         <br />
         <br />
         <div class="login__input">
-          <router-link :to="{ name: 'Splash Screen' }" class="yell">
+          <router-link :to="{ name: 'Success Page' }" class="yell">
             <button class="loginbtn">Confirm Code</button></router-link
           >
         </div>
         <div class="signup">
           You didn't receive any code ?&nbsp;
-          <router-link :to="{ name: 'Splash Screen' }" class="yell"
+          <router-link :to="{ name: 'Success Page' }" class="yell"
             >Resend</router-link
           >
         </div>
@@ -46,15 +48,15 @@ export default {
 };
 </script>
 <style scoped>
-@import "../assets/css/Form.css";
+@import "../../assets/css/Form.css";
 .mt-5 {
   display: flex;
   gap: 1em;
   align-items: center;
 }
 .otp {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   text-align: center;
 }
 </style>

@@ -4,7 +4,7 @@
       <div class="dashboard__head">
         <div class="dashboard__name"><h3>My Activity</h3></div>
         <div class="dashboard__profile_pics">
-          <img src="../assets/img/slide_1.jpg" alt="" />
+          <img src="../../assets/img/slide_1.jpg" alt="" />
         </div>
       </div>
       <div class="dashboard__box__container">
@@ -92,7 +92,7 @@
           <div class="event_box">
             <div class="events">
               <div class="event__image">
-                <img src="../assets/img/slide_1.jpg" alt="" />
+                <img src="../../assets/img/slide_1.jpg" alt="" />
               </div>
               <div class="event__details">
                 <h3>Laff Off Season 1</h3>
@@ -108,7 +108,7 @@
           <div class="event_box">
             <div class="events">
               <div class="event__image">
-                <img src="../assets/img/slide2.jpg" alt="" />
+                <img src="../../assets/img/slide2.jpg" alt="" />
               </div>
               <div class="event__details">
                 <h3>Laff Off Season 2</h3>
@@ -124,7 +124,7 @@
           <div class="event_box">
             <div class="events">
               <div class="event__image">
-                <img src="../assets/img/slide_3.jpg" alt="" />
+                <img src="../../assets/img/slide_3.jpg" alt="" />
               </div>
               <div class="event__details">
                 <h3>Laff Off Season 3</h3>
@@ -160,7 +160,7 @@
 </template>
 
 <script>
-import ChartView from "../components/ChartView.vue";
+import ChartView from "../../components/ChartView.vue";
 export default {
   name: "DashboardView",
   components: { ChartView },

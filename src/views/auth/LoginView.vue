@@ -14,12 +14,12 @@
         <form action="" method="post">
           <label for="email">Your Email</label>
           <br />
-          <input type="email" name="" id="" />
+          <input type="email" name="" id="email" />
           <br />
           <br />
           <label for="password">Password</label>
           <br />
-          <input type="password" name="" id="" />
+          <input type="password" name="" id="email" />
           <div id="forgot">
             <router-link :to="{ name: 'Other Information' }" class="yell"
               >Forgot Password?</router-link

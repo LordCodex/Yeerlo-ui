@@ -1,0 +1,46 @@
+{
+  "data": {
+    "id": "5858df55-a158-4750-92b7-03ee4c6a0cf0",
+    "name": "olat media",
+    "access_roles": ["creator"],
+    "email": "olatmedia1@gmail.com",
+    "settings": {
+      "security": {
+        "is_update": false
+      },
+      "notifications": {
+        "email": {
+          "email_on_newsletter": true,
+          "account_reactions": true,
+          "email_on_my_subscriptions": true
+        }
+      },
+      "modules": {
+        "total_storage": 104857600,
+        "storage_used": 0,
+        "word_count": 2000,
+        "sub_domain": false,
+        "remarketing_credits": 0
+      },
+      "current_currency": "USD",
+      "is_update": false,
+      "auth_key": "_1660964617173433308",
+      "referral_code": "",
+      "referrer_code": ""
+    },
+    "withdrawal_info": {
+      "sub_account_id": "",
+      "settlement_schedule": "",
+      "sub_account_code": ""
+    },
+    "subscribers": {
+      "user_id": "",
+      "subs_len": 0
+    },
+    "verified": false,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NjEwNTEwMTgsInVzZXJJZCI6IjU4NThkZjU1LWExNTgtNDc1MC05MmI3LTAzZWU0YzZhMGNmMCJ9.K4g9kGnS0l8eqUYmlnabKKXLG0AoCCYMmOx97BRbPzA",
+    "pin_set": false
+  },
+  "message": "SignUp successful",
+  "success": true
+}

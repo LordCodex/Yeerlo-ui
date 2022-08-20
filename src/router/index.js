@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LoginView from "../views/auth/LoginView.vue";
+import TestedPage from "../views/auth/TestedPage.vue";
 import ForgotView from "../views/auth/ForgotView.vue";
 import SignUp from "../views/auth/SignUp.vue";
 import NotFound from "../views/NotFound.vue";
@@ -58,12 +59,17 @@ const routes = [
     component: SignUp,
   },
   {
+    path: "/tested",
+    name: "tested page",
+    component: TestedPage,
+  },
+  {
     path: "/otherinfo",
     name: "Other Information",
     component: OtherInfo,
   },
   {
-    path: "/otpverify",
+    path: "/otpverify/:email",
     name: "Otp Verification",
     component: OtpVerify,
   },

@@ -100,8 +100,12 @@ input[type="text"],input[type="number"],input[type="password"],input[type="email
 }
 .code-input{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  gap: 0.8em;
+  text-align: center;
+  margin: 0 auto;
+
 }

@@ -16,11 +16,15 @@
     "axios": "^0.27.2",
     "chart.js": "^3.8.0",
     "core-js": "^3.8.3",
+    "mosha-vue-toastify": "^1.0.23",
+    "stylus-loader": "^3.0.2",
     "vue": "^3.2.13",
     "vue-chartjs": "^4.1.1",
+    "vue-loading-overlay": "5.0",
     "vue-plugin-load-script": "^2.1.1",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

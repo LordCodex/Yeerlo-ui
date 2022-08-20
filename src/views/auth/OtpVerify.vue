@@ -10,23 +10,72 @@
       <br />
       <!-- form start from here -->
       <div class="form">
-        <div class="code-input">
-          <form action="" class="mt-5">
-            <input class="otp" type="text" maxlength="1" />
-            <input class="otp" type="text" maxlength="1" />
-            <input class="otp" type="text" maxlength="1" />
-            <input class="otp" type="text" maxlength="1" />
-            <input class="otp" type="text" maxlength="1" />
-            <input class="otp" type="text" maxlength="1" />
-          </form>
-        </div>
-        <br />
-        <br />
-        <div class="login__input">
-          <router-link :to="{ name: 'Success Page' }" class="yell">
-            <button class="loginbtn">Confirm Code</button></router-link
-          >
-        </div>
+        <form @submit.prevent="handleSubmit">
+          <div class="mt-5">
+            <div class="code-input">
+              <input
+                class="otp"
+                type="text"
+                maxlength="1"
+                v-model.trim="otpone"
+                data-index="0"
+                ref="input-0"
+                @input="focusNextOncePopulated($event, 1)"
+              />
+              <input
+                class="otp"
+                type="text"
+                maxlength="1"
+                v-model.trim="otptwo"
+                data-index="1"
+                ref="input-1"
+                @input="focusNextOncePopulated($event, 1)"
+              />
+              <input
+                class="otp"
+                type="text"
+                maxlength="1"
+                v-model.trim="otpthree"
+                data-index="2"
+                ref="input-2"
+                @input="focusNextOncePopulated($event, 1)"
+              />
+              <input
+                class="otp"
+                type="text"
+                maxlength="1"
+                v-model.trim="otpfour"
+                data-index="3"
+                ref="input-3"
+                @input="focusNextOncePopulated($event, 1)"
+              />
+              <input
+                class="otp"
+                type="text"
+                maxlength="1"
+                v-model.trim="otpfive"
+                data-index="4"
+                ref="input-4"
+                @input="focusNextOncePopulated($event, 1)"
+              />
+              <input
+                class="otp"
+                type="text"
+                maxlength="1"
+                v-model.trim="otpsix"
+                data-index="5"
+                ref="input-5"
+                @input="focusNextOncePopulated($event, 1)"
+              />
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="login__input">
+            <button class="loginbtn">Confirm Code</button>
+          </div>
+        </form>
+
         <div class="signup">
           You didn't receive any code ?&nbsp;
           <router-link :to="{ name: 'Success Page' }" class="yell"
@@ -38,11 +87,82 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   name: "OtpVerify",
+  data() {
+    return {
+      token: this.$route.params.token,
+      otpone: "",
+      otptwo: "",
+      otpthree: "",
+      otpfour: "",
+      otpfive: "",
+      otpsix: "",
+    };
+  },
   methods: {
-    back() {
-      this.$router.go(-1);
+    handleSubmit() {
+      const email = this.$route.params.email;
+      const otp =
+        this.otpone +
+        this.otptwo +
+        this.otpthree +
+        this.otpfour +
+        this.otpfive +
+        this.otpsix;
+
+      const url = `https://yeerlo-go.herokuapp.com/code/verify?code=${otp}&key=verification_${email}&action=welcome&email=${email}`;
+      const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NjEwNTEwMTgsInVzZXJJZCI6IjU4NThkZjU1LWExNTgtNDc1MC05MmI3LTAzZWU0YzZhMGNmMCJ9.K4g9kGnS0l8eqUYmlnabKKXLG0AoCCYMmOx97BRbPzA`;
+
+      let loader = this.$loading.show();
+      if (this.isOnLine == false) {
+        this.$moshaToast("Network Error: Check Connectivity.", {
+          type: "danger",
+          hideProgressBar: true,
+          timeout: 3000,
+          showIcon: true,
+          transition: "bounce",
+          showCloseButton: false,
+          swipeClose: false,
+        });
+      }
+      axios
+        .post(url, { headers: { Authorization: `Bearer ${token}` } })
+        .then((response) => {
+          loader.hide();
+          this.$moshaToast(response.data.message, {
+            type: "success",
+            hideProgressBar: true,
+            timeout: 1000,
+            showIcon: true,
+            transition: "bounce",
+            showCloseButton: false,
+            swipeClose: false,
+          });
+          setInterval(() => {
+            this.$router.push({ name: "Success Page" });
+          }, 3000);
+        })
+        .catch((error) => {
+          loader.hide();
+          this.$moshaToast(error.response.data.message, {
+            type: "danger",
+            hideProgressBar: true,
+            timeout: 1000,
+            showIcon: true,
+            transition: "bounce",
+            showCloseButton: false,
+            swipeClose: false,
+          });
+        });
+    },
+    focusNextOncePopulated(event, max) {
+      if (event.target.value.length === max) {
+        const nextElement =
+          this.$refs?.[`input-${Number(event.target.dataset.index) + 1}`];
+        if (nextElement) nextElement.focus();
+      }
     },
   },
 };

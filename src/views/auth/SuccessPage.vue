@@ -10,7 +10,7 @@
           <img src="../../assets/img/mark.png" alt="" />
         </div>
         <p>You've successfully setup your Yeerlo account.</p>
-        <router-link :to="{ name: 'login' }" class="yell">
+        <router-link :to="{ name: 'Dashboard' }" class="yell">
           <button>Continue</button>
         </router-link>
       </div>

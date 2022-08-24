@@ -2,7 +2,9 @@
   <div class="dashboard__container">
     <div class="dashboard__container__boxall">
       <div class="dashboard__head">
-        <div class="dashboard__name"><h3>My Activity</h3></div>
+        <div class="dashboard__name">
+          <h3>My Activity</h3>
+        </div>
         <div class="dashboard__profile_pics">
           <img src="../../assets/img/slide_1.jpg" alt="" />
         </div>
@@ -48,7 +50,7 @@
           <div class="circle" style="background-color: #bb0711">
             <i class="fas fa-shopping-bag" style="color: white"></i>
           </div>
-          <h2>0</h2>
+          <h2>{{ user.settings.modules.remarketing_credits }}</h2>
           <p>Remarketing Credit</p>
         </div>
 
@@ -56,7 +58,7 @@
           <div class="circle" style="background-color: #07bbbb">
             <i class="fab fa-slack-hash" style="color: white"></i>
           </div>
-          <h2>0</h2>
+          <h2>{{ nFormatter(user.settings.modules.word_count) }}</h2>
           <p>Character Count</p>
         </div>
       </div>
@@ -66,7 +68,7 @@
           <div class="circle" style="background: #6c07bb">
             <i class="fas fa-database" style="color: white"></i>
           </div>
-          <h2>2 GB</h2>
+          <h2>{{ bytesToSize(user.settings.modules.storage_used) }}</h2>
           <p>Storage used</p>
         </div>
 
@@ -74,7 +76,7 @@
           <div class="circle" style="background: #fcf323">
             <i class="fas fa-hdd" style="color: white"></i>
           </div>
-          <h2>4.5 GB</h2>
+          <h2>{{ bytesToSize(user.settings.modules.total_storage) }}</h2>
           <p>Storage Capacity</p>
         </div>
       </div>
@@ -160,10 +162,44 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import ChartView from "../../components/ChartView.vue";
 export default {
   name: "DashboardView",
   components: { ChartView },
+  computed: {
+    ...mapGetters(["user"]),
+  },
+  methods: {
+    bytesToSize(bytes) {
+      const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+      if (bytes === 0) return "0";
+      const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)), 10);
+      if (i === 0) return `${bytes} ${sizes[i]})`;
+      return `${(bytes / 1024 ** i).toFixed(1)} ${sizes[i]}`;
+    },
+    nFormatter(num, digits = 2) {
+      var si = [
+        { value: 1, symbol: "" },
+        { value: 1e3, symbol: "k" },
+        { value: 1e6, symbol: "M" },
+        { value: 1e9, symbol: "G" },
+        { value: 1e12, symbol: "T" },
+        { value: 1e15, symbol: "P" },
+        { value: 1e18, symbol: "E" },
+      ];
+      var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+      var i;
+      for (i = si.length - 1; i > 0; i--) {
+        if (num >= si[i].value) {
+          break;
+        }
+      }
+      return (
+        (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol
+      );
+    },
+  },
 };
 </script>
 

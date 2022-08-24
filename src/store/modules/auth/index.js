@@ -1,8 +1,7 @@
-import { createStore } from "vuex";
-import createPersistedState from "vuex-persistedstate";
-
-const store = createStore({
-  plugins: [createPersistedState()],
+// import mutations from "./mutations";
+// import getters from "./getters";
+// import actions from "./actions";
+export default {
   namespaced: true,
   state() {
     return {
@@ -24,6 +23,4 @@ const store = createStore({
       context.commit("user", user);
     },
   },
-});
-
-export default store;
+};

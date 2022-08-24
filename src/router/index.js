@@ -49,7 +49,7 @@ const routes = [
     component: MenuView,
   },
   {
-    path: "/forgot",
+    path: "/forgot/:email",
     name: "Forgot Password",
     component: ForgotView,
   },
@@ -109,8 +109,8 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
-router.beforeEach((to) => {
-  console.log(to);
-  document.title = `${process.env.VUE_APP_TITLE} - ${to.name}`;
-});
+// router.beforeEach((to) => {
+//   console.log(to);
+//   document.title = `${process.env.VUE_APP_TITLE} - ${to.name}`;
+// });
 export default router;

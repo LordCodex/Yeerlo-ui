@@ -1,10 +1,12 @@
 <template>
+  <router-view></router-view>
+
   <!-- <nav>
     <router-link to="/">Login</router-link>
     <router-link to="/about">About</router-link> |
     <router-link :to="{ name: 'login' }">Login</router-link>
   </nav> -->
-  <router-view />
+  <!-- <router-view /> -->
 </template>
 
 <style>

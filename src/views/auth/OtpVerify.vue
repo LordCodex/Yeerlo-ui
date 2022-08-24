@@ -78,8 +78,8 @@
 
         <div class="signup">
           You didn't receive any code ?&nbsp;
-          <router-link :to="{ name: 'Success Page' }" class="yell"
-            >Resend</router-link
+          <a href="javascript:void(0)" @click="resendOtp" class="yell"
+            >Resend code</a
           >
         </div>
       </div>
@@ -111,9 +111,13 @@ export default {
         this.otpfour +
         this.otpfive +
         this.otpsix;
-
-      const url = `https://yeerlo-go.herokuapp.com/code/verify?code=${otp}&key=verification_${email}&action=welcome&email=${email}`;
-      const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NjEwNTEwMTgsInVzZXJJZCI6IjU4NThkZjU1LWExNTgtNDc1MC05MmI3LTAzZWU0YzZhMGNmMCJ9.K4g9kGnS0l8eqUYmlnabKKXLG0AoCCYMmOx97BRbPzA`;
+      var config = {
+        method: "post",
+        url: `https://yeerlo-go.herokuapp.com/code/verify?code=${otp}&key=verification_${email}&action=welcome&email=${email}`,
+        headers: {
+          "x-access-token": this.token,
+        },
+      };
 
       let loader = this.$loading.show();
       if (this.isOnLine == false) {
@@ -127,8 +131,7 @@ export default {
           swipeClose: false,
         });
       }
-      axios
-        .post(url, { headers: { Authorization: `Bearer ${token}` } })
+      axios(config)
         .then((response) => {
           loader.hide();
           this.$moshaToast(response.data.message, {
@@ -140,9 +143,56 @@ export default {
             showCloseButton: false,
             swipeClose: false,
           });
-          setInterval(() => {
-            this.$router.push({ name: "Success Page" });
-          }, 3000);
+
+          this.$router.push({ name: "Success Page" });
+        })
+        .catch((error) => {
+          loader.hide();
+          this.$moshaToast(error.response.data.message, {
+            type: "danger",
+            hideProgressBar: true,
+            timeout: 1000,
+            showIcon: true,
+            transition: "bounce",
+            showCloseButton: false,
+            swipeClose: false,
+          });
+        });
+    },
+    resendOtp() {
+      const email = this.$route.params.email;
+      var sendOtp = {
+        method: "get",
+        url: `https://yeerlo-go.herokuapp.com/auth/resend-code/${email}`,
+        headers: {
+          "x-access-token": this.token,
+        },
+      };
+      let loader = this.$loading.show();
+      if (this.isOnLine == false) {
+        this.$moshaToast("Network Error: Check Connectivity.", {
+          type: "danger",
+          hideProgressBar: true,
+          timeout: 3000,
+          showIcon: true,
+          transition: "bounce",
+          showCloseButton: false,
+          swipeClose: false,
+        });
+      }
+
+      axios(sendOtp)
+        .then((response) => {
+          loader.hide();
+          this.$moshaToast(response.data.message, {
+            type: "success",
+            hideProgressBar: true,
+            timeout: 1000,
+            showIcon: true,
+            transition: "bounce",
+            showCloseButton: false,
+            swipeClose: false,
+          });
         })
         .catch((error) => {
           loader.hide();

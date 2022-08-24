@@ -94,7 +94,7 @@
             </button>
           </div>
           <!-- sign up with socials start here -->
-          <div class="signup with_account">or sign up with account</div>
+          <!-- <div class="signup with_account">or sign up with account</div>
           <div class="signup accounts">
             <button class="social">
               <i class="fab fa-google"></i>&nbsp; Google
@@ -102,7 +102,7 @@
             <button class="social">
               <i class="fab fa-facebook"></i>&nbsp; Facebook
             </button>
-          </div>
+          </div> -->
           <!-- already have an account starts here -->
           <div class="signup">
             Already have an account ?&nbsp;
@@ -157,7 +157,7 @@ export default {
         });
       }
       axios
-        .post("https://yeerlo-go.herokuapp.com/auth/login", {
+        .post("https://yeerlo-go.herokuapp.com/auth", {
           name: this.name,
           email: this.email,
           password: this.password,
@@ -175,12 +175,15 @@ export default {
           });
           this.users = response.data;
           this.token = this.users.data.token;
-          setInterval(() => {
-            this.$router.push({
-              name: "Otp Verification",
-              params: { email: this.email, token: this.token },
-            });
-          }, 1000);
+          this.$store.dispatch("user", this.users.data);
+          setTimeout(
+            () =>
+              this.$router.push({
+                name: "Otp Verification",
+                params: { email: this.email, token: this.token },
+              }),
+            2000
+          );
         })
         .catch((error) => {
           loader.hide();

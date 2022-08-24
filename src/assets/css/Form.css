@@ -24,7 +24,7 @@ label {
   text-align: start;
   color: #192252;
 }
-input {
+input,select,textarea {
   width: 100%;
   padding: 0.5em;
   height: 50px;

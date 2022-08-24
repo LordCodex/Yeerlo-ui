@@ -184,7 +184,7 @@ export default {
   text-align: center;
 }
 .sheet__header h3 {
-  font-size: 25px;
+  font-size: 22px;
   text-align: center;
   color: #192252;
   margin-bottom: 2px;

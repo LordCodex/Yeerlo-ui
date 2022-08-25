@@ -15,6 +15,8 @@ import DashboardView from "../views/dashboard/DashboardView.vue";
 import MenuView from "../views/dashboard/MenuView.vue";
 import MyProfile from "../views/dashboard/MyProfile.vue";
 import MyPage from "../views/dashboard/MyPage.vue";
+import EarningView from "../views/dashboard/EarningView.vue";
+import VendorView from "../views/dashboard/VendorView.vue";
 import ChartView from "../components/ChartView.vue";
 
 const routes = [
@@ -77,6 +79,16 @@ const routes = [
     path: "/profile",
     name: "My Profile",
     component: MyProfile,
+  },
+  {
+    path: "/earning",
+    name: "My Earning",
+    component: EarningView,
+  },
+  {
+    path: "/vendor",
+    name: "Vendor List",
+    component: VendorView,
   },
   {
     path: "/mypage",

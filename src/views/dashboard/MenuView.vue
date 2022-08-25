@@ -48,29 +48,29 @@
           </div>
           <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
         </div>
-
-        <div class="menu">
-          <div class="menu-text">
-            <i class="fas fa-money-bill-wave icon"></i> &nbsp; Earnings
+        <router-link :to="{ name: 'My Earning' }" class="page-link">
+          <div class="menu">
+            <div class="menu-text">
+              <i class="fas fa-money-bill-wave icon"></i> &nbsp; Earnings
+            </div>
+            <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
           </div>
-          <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
-        </div>
-
+        </router-link>
         <div class="menu">
           <div class="menu-text">
             <i class="fas fa-th icon"></i> &nbsp; Modules
           </div>
           <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
         </div>
-
-        <div class="menu">
-          <div class="menu-text">
-            <i class="fas fa-store-alt icon"></i> &nbsp; Vendors
+        <router-link :to="{ name: 'Vendor List' }" class="page-link">
+          <div class="menu">
+            <div class="menu-text">
+              <i class="fas fa-store-alt icon"></i> &nbsp; Vendors
+            </div>
+            <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
           </div>
-          <div class="menu-icon"><i class="fas fa-angle-right"></i></div>
-        </div>
-
-        <div class="menu">
+        </router-link>
+        <div class="menu" @click="isOpenRate = true">
           <div class="menu-text">
             <i class="fas fa-star icon"></i> &nbsp; Rate Yeerlo
           </div>
@@ -85,11 +85,86 @@
         </div>
       </div>
     </div>
+    <!-- Edit Withdraw  sheet -->
+    <Sheet
+      v-slot="{ closeSelf }"
+      maxWidth="auto"
+      height="90%"
+      v-model:visible="isOpenRate"
+      :clickOutside="false"
+    >
+      <!-- Withdraw sheetcontainer -->
+      <div class="sheetcontainer">
+        <!-- Withdraw sheetclose -->
+        <h3 @click="closeSelf()" style="float: right">
+          <i class="fas fa-window-close" style="color: #f06723"></i>
+        </h3>
+        <br />
+        <br />
+        <!-- Withdraw sheet header -->
+        <div class="sheet__header">
+          <h3><strong>Rate Yeerlo</strong></h3>
+          <p>Yeerlo Rating & Testimonial</p>
+        </div>
+        <br />
+        <div class="sheet_content">
+          <div class="form__input-container">
+            <div class="form__input">
+              <label for="Position">Position* </label>
+              <input type="text" id="" placeholder="e.g CEO, OLAT" />
+            </div>
+            <br />
+            <div class="form__input">
+              <label for="Website">Website (Optional)</label>
+              <input type="text" id="" placeholder="e.g www.olat.com" />
+            </div>
+            <br />
+            <div class="form__input">
+              <label for="Testimonial">Testimonial* </label>
+              <textarea
+                style="height: 146px; width: 100%"
+                placeholder="Write your thoughts on how Yeerlo has helped you enhance your events or businesses..."
+              ></textarea>
+            </div>
+            <br />
+            <div class="form__input">
+              <label for="Ratings">Ratings </label>
+              <select name="ratings" id="ratings">
+                <option value="volvo">1</option>
+                <option value="saab">1.5</option>
+                <option value="opel">2</option>
+                <option value="audi">2.5</option>
+                <option value="volvo">3</option>
+                <option value="saab">3.5</option>
+                <option value="opel">4</option>
+                <option value="audi">4.5</option>
+                <option value="opel">5</option>
+              </select>
+            </div>
+            <br />
+            <div class="login__input">
+              <button class="loginbtn">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Withdraw sheetcontainer ends here -->
+    </Sheet>
+    <!-- Edit Withdraw  ends sheet -->
   </div>
 </template>
 <script>
+import { Sheet } from "bottom-sheet-vue3";
 export default {
   name: "MenuView",
+  components: {
+    Sheet,
+  },
+  data() {
+    return {
+      isOpenRate: false,
+    };
+  },
 };
 </script>
 <style scoped>
@@ -152,5 +227,24 @@ export default {
 .main {
   padding: 16px;
   margin-bottom: 30px;
+}
+.sheetcontainer {
+  max-width: 85%;
+  margin: 0 auto;
+}
+.sheet__header {
+  text-align: center;
+}
+.sheet__header h3 {
+  font-size: 22px;
+  text-align: center;
+  color: #192252;
+  margin-bottom: 2px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
 }
 </style>

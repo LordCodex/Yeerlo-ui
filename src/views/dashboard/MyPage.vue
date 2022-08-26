@@ -21,39 +21,54 @@
         customization, cliick the button above.for live mode ( i.e saved
         customization), use click button
       </div>
-      <div class="menus">
-        <div class="menu">
-          <div class="menu-text">Basic Info</div>
-          <i class="fas fa-plus"></i>
-        </div>
+      <AccordionList open-multiple-items>
+        <AccordionItem>
+          <template #summary>Basic Info</template>
+          <template #icon
+            ><div class="menu-icon"><i class="fas fa-plus"></i></div
+          ></template>
+          Some nested content
+        </AccordionItem>
+        <AccordionItem>
+          <template #summary>Media Resources</template>
+          <template #icon
+            ><div class="menu-icon"><i class="fas fa-plus"></i></div
+          ></template>
+          Here some text of nested item-2
+        </AccordionItem>
+        <AccordionItem>
+          <template #summary>Gallery</template>
+          <template #icon
+            ><div class="menu-icon"><i class="fas fa-plus"></i></div
+          ></template>
+          Here some text of nested item-2
+        </AccordionItem>
+        <AccordionItem>
+          <template #summary>Event</template>
+          <template #icon
+            ><div class="menu-icon"><i class="fas fa-plus"></i></div
+          ></template>
+          Here some text of nested item-2
+        </AccordionItem>
 
-        <div class="menu">
-          <div class="menu-text">Media Resource</div>
-          <div class="menu-icon"><i class="fas fa-plus"></i></div>
-        </div>
+        <AccordionItem>
+          <template #summary>Sponsor</template>
+          <template #icon
+            ><div class="menu-icon"><i class="fas fa-plus"></i></div
+          ></template>
+          Here some text of nested item-2
+        </AccordionItem>
+      </AccordionList>
 
-        <div class="menu">
-          <div class="menu-text">Gallery</div>
-          <div class="menu-icon"><i class="fas fa-plus"></i></div>
-        </div>
-
-        <div class="menu">
-          <div class="menu-text">Events</div>
-          <div class="menu-icon"><i class="fas fa-plus"></i></div>
-        </div>
-
-        <div class="menu">
-          <div class="menu-text">Sponsors</div>
-          <div class="menu-icon"><i class="fas fa-plus"></i></div>
-        </div>
-      </div>
       <button class="loginbtn">Save Changes</button>
     </div>
   </div>
 </template>
 <script>
+import { AccordionList, AccordionItem } from "vue3-rich-accordion";
 export default {
   name: "MyPage",
+  components: { AccordionList, AccordionItem },
   methods: {
     back() {
       this.$router.go(-1);

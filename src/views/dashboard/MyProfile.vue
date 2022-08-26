@@ -53,19 +53,11 @@
     </div>
     <!-- menus ends here -->
     <!-- Edit profile  sheet -->
-    <Sheet
-      v-slot="{ closeSelf }"
-      maxWidth="auto"
-      height="90%"
-      v-model:visible="isOpenProfile"
-      :clickOutside="false"
-    >
+    <Sheet maxWidth="auto" height="90%" v-model:visible="isOpenProfile">
       <!-- profile sheetcontainer -->
       <div class="sheetcontainer">
         <!-- profile sheetclose -->
-        <h3 @click="closeSelf()" style="float: right">
-          <i class="fas fa-window-close" style="color: #f06723"></i>
-        </h3>
+
         <br />
         <br />
         <!-- profile sheet header -->
@@ -75,8 +67,11 @@
         </div>
         <div class="sheet_content">
           <div class="upload_image">
-            <div class="upload_pics">
-              <img src="../../assets/img/slide_1.jpg" alt="" />
+            <div class="dashboard__profile_pics">
+              <img
+                :src="myImageSource"
+                :style="{ backgroundColor: dominantColor }"
+              />
             </div>
             <input type="file" ref="file" style="display: none" />
             <button @click="$refs.file.click()">Upload Image</button>
@@ -84,17 +79,17 @@
           <div class="form__input-container">
             <div class="form__input">
               <label for="name">Name </label>
-              <input type="text" id="" />
+              <input :value="user.name" type="text" id="" />
             </div>
             <br />
             <div class="form__input">
               <label for="Phone">Phone (Optional)</label>
-              <input type="text" id="" />
+              <input :value="user.phone_number" type="phone" id="" />
             </div>
             <br />
             <div class="form__input">
               <label for="Username">Username </label>
-              <input type="text" id="" />
+              <input :value="user.username" type="text" id="" />
             </div>
             <br />
             <div class="form__input">
@@ -109,7 +104,7 @@
             <br />
             <div class="form__input">
               <label for="Bio">Bio </label>
-              <textarea style="height: 146px; width: 100%">
+              <textarea :value="user.bio" style="height: 146px; width: 100%">
 Enter Bio here...</textarea
               >
             </div>
@@ -125,19 +120,11 @@ Enter Bio here...</textarea
     <!-- Edit profile  ends sheet -->
 
     <!-- Edit social  ends sheet -->
-    <Sheet
-      v-slot="{ closeSelf }"
-      maxWidth="auto"
-      height="90%"
-      v-model:visible="isOpensocial"
-      :clickOutside="false"
-    >
+    <Sheet maxWidth="auto" height="90%" v-model:visible="isOpensocial">
       <!-- social sheetcontainer -->
       <div class="sheetcontainer">
         <!-- social sheetclose -->
-        <h3 @click="closeSelf()" style="float: right">
-          <i class="fas fa-window-close" style="color: #f06723"></i>
-        </h3>
+
         <br />
         <br />
         <!-- social sheet header -->
@@ -345,19 +332,11 @@ Enter Bio here...</textarea
     </Sheet>
     <!-- Edit social ends sheet -->
     <!-- Edit Settings  sheet -->
-    <Sheet
-      v-slot="{ closeSelf }"
-      maxWidth="auto"
-      height="50%"
-      v-model:visible="isOpenSettings"
-      :clickOutside="false"
-    >
+    <Sheet maxWidth="auto" height="50%" v-model:visible="isOpenSettings">
       <!-- Settings sheetcontainer -->
       <div class="sheetcontainer">
         <!-- Settings sheetclose -->
-        <h3 @click="closeSelf()" style="float: right">
-          <i class="fas fa-window-close" style="color: #f06723"></i>
-        </h3>
+
         <br />
         <br />
         <!-- Settings sheet header -->
@@ -396,19 +375,11 @@ Enter Bio here...</textarea
     <!-- Edit Settings  ends sheet -->
 
     <!-- Edit Currency  sheet -->
-    <Sheet
-      v-slot="{ closeSelf }"
-      maxWidth="auto"
-      height="40%"
-      v-model:visible="isOpenCurrency"
-      :clickOutside="false"
-    >
+    <Sheet maxWidth="auto" height="40%" v-model:visible="isOpenCurrency">
       <!-- Currency sheetcontainer -->
       <div class="sheetcontainer">
         <!-- Currency sheetclose -->
-        <h3 @click="closeSelf()" style="float: right">
-          <i class="fas fa-window-close" style="color: #f06723"></i>
-        </h3>
+
         <br />
         <br />
         <!-- Currency sheet header -->
@@ -442,19 +413,11 @@ Enter Bio here...</textarea
     <!-- Edit Currency  ends sheet -->
 
     <!-- Edit Security  sheet -->
-    <Sheet
-      v-slot="{ closeSelf }"
-      maxWidth="auto"
-      height="50%"
-      v-model:visible="isOpenSecurity"
-      :clickOutside="false"
-    >
+    <Sheet maxWidth="auto" height="50%" v-model:visible="isOpenSecurity">
       <!-- Security sheetcontainer -->
       <div class="sheetcontainer">
         <!-- Security sheetclose -->
-        <h3 @click="closeSelf()" style="float: right">
-          <i class="fas fa-window-close" style="color: #f06723"></i>
-        </h3>
+
         <br />
         <br />
         <!-- Security sheet header -->
@@ -490,19 +453,11 @@ Enter Bio here...</textarea
     <!-- Edit Security  ends sheet -->
 
     <!-- Edit Transaction  sheet -->
-    <Sheet
-      v-slot="{ closeSelf }"
-      maxWidth="auto"
-      height="60%"
-      v-model:visible="isOpenTransaction"
-      :clickOutside="false"
-    >
+    <Sheet maxWidth="auto" height="60%" v-model:visible="isOpenTransaction">
       <!-- Transaction sheetcontainer -->
       <div class="sheetcontainer">
         <!-- Transaction sheetclose -->
-        <h3 @click="closeSelf()" style="float: right">
-          <i class="fas fa-window-close" style="color: #f06723"></i>
-        </h3>
+
         <br />
         <br />
         <!-- Transaction sheet header -->
@@ -534,19 +489,11 @@ Enter Bio here...</textarea
     <!-- Edit Transaction  ends sheet -->
 
     <!-- Edit Withdraw  sheet -->
-    <Sheet
-      v-slot="{ closeSelf }"
-      maxWidth="auto"
-      height="60%"
-      v-model:visible="isOpenWithdraw"
-      :clickOutside="false"
-    >
+    <Sheet maxWidth="auto" height="60%" v-model:visible="isOpenWithdraw">
       <!-- Withdraw sheetcontainer -->
       <div class="sheetcontainer">
         <!-- Withdraw sheetclose -->
-        <h3 @click="closeSelf()" style="float: right">
-          <i class="fas fa-window-close" style="color: #f06723"></i>
-        </h3>
+
         <br />
         <br />
         <!-- Withdraw sheet header -->
@@ -579,6 +526,7 @@ Enter Bio here...</textarea
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
 import { Sheet } from "bottom-sheet-vue3";
 export default {
   name: "MyProfile",
@@ -594,7 +542,27 @@ export default {
       isOpenSecurity: false,
       isOpenTransaction: false,
       isOpenWithdraw: false,
+      imgurl: "/img/yeerlo_user.632f8c22.png",
+      dominantcolor: "#FAAE1C",
     };
+  },
+  computed: {
+    // ...mapGetters(["user"]),
+    ...mapState(["user"]),
+    myImageSource() {
+      if (!this.$store.state.user.image) {
+        return this.imgurl;
+      } else {
+        return this.$store.state.user.image.url;
+      }
+    },
+    dominantColor() {
+      if (!this.$store.state.user.image) {
+        return this.dominantcolor;
+      } else {
+        return this.$store.state.user.image.dominant_color;
+      }
+    },
   },
   methods: {
     back() {
@@ -649,16 +617,16 @@ export default {
   color: #192252;
   margin-bottom: 2px;
 }
-.upload_pics {
+.dashboard__profile_pics {
   border: 1px solid #4e3a2f;
   border-radius: 0.5em;
   object-fit: cover;
   /* padding: 0.3em; */
-  width: 60.21px;
-  height: 60.21px;
+  width: 70.21px;
+  height: 70.21px;
 }
 
-.upload_pics img {
+.dashboard__profile_pics img {
   background-color: #4e3a2f;
   border-radius: 0.5em;
   object-fit: cover;

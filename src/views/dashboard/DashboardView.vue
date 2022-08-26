@@ -5,8 +5,12 @@
         <div class="dashboard__name">
           <h3>My Activity</h3>
         </div>
+
         <div class="dashboard__profile_pics">
-          <img src="../../assets/img/slide_1.jpg" alt="" />
+          <img
+            :src="myImageSource"
+            :style="{ backgroundColor: dominantColor }"
+          />
         </div>
       </div>
       <div class="dashboard__box__container">
@@ -14,7 +18,10 @@
           <div class="circle" style="background-color: blue">
             <i class="fas fa-star" style="color: white"></i>
           </div>
-          <h2>4.31</h2>
+
+          <h2>
+            {{ user.average_rating ? nFormatter(user.average_rating) : 0 }}
+          </h2>
           <p>Average Community Rating</p>
         </div>
 
@@ -22,8 +29,8 @@
           <div class="circle" style="background-color: green">
             <i class="fas fa-user-friends" style="color: white"></i>
           </div>
-          <h2>3</h2>
-          <p>Average Community Rating</p>
+          <h2>{{ nFormatter(user.subscribers.subs_len) }}</h2>
+          <p>Subscribers</p>
         </div>
       </div>
 
@@ -32,7 +39,7 @@
           <div class="circle" style="background-color: #848fac">
             <i class="fas fa-rocket" style="color: white"></i>
           </div>
-          <h2>0</h2>
+          <h2>{{ user.views ? nFormatter(user.views) : 0 }}</h2>
           <p>Page Impression</p>
         </div>
 
@@ -40,7 +47,7 @@
           <div class="circle" style="background-color: black">
             <i class="fas fa-thumbs-up" style="color: white"></i>
           </div>
-          <h2>0</h2>
+          <h2>{{ user.likes ? nFormatter(user.likes) : 0 }}</h2>
           <p>Page Like</p>
         </div>
       </div>
@@ -50,7 +57,7 @@
           <div class="circle" style="background-color: #bb0711">
             <i class="fas fa-shopping-bag" style="color: white"></i>
           </div>
-          <h2>{{ user.settings.modules.remarketing_credits }}</h2>
+          <h2>{{ nFormatter(user.settings.modules.remarketing_credits) }}</h2>
           <p>Remarketing Credit</p>
         </div>
 
@@ -76,7 +83,9 @@
           <div class="circle" style="background: #fcf323">
             <i class="fas fa-hdd" style="color: white"></i>
           </div>
-          <h2>{{ bytesToSize(user.settings.modules.total_storage) }}</h2>
+          <h2>
+            {{ bytesToSize(user.settings.modules.total_storage) }}
+          </h2>
           <p>Storage Capacity</p>
         </div>
       </div>
@@ -162,13 +171,35 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+// import { mapGetters } from "vuex";
+import { mapState } from "vuex";
 import ChartView from "../../components/ChartView.vue";
 export default {
   name: "DashboardView",
+  data() {
+    return {
+      imgurl: "/img/yeerlo_user.632f8c22.png",
+      dominantcolor: "#FAAE1C",
+    };
+  },
   components: { ChartView },
   computed: {
-    ...mapGetters(["user"]),
+    // ...mapGetters(["user"]),
+    ...mapState(["user"]),
+    myImageSource() {
+      if (!this.$store.state.user.image) {
+        return this.imgurl;
+      } else {
+        return this.$store.state.user.image.url;
+      }
+    },
+    dominantColor() {
+      if (!this.$store.state.user.image) {
+        return this.dominantcolor;
+      } else {
+        return this.$store.state.user.image.dominant_color;
+      }
+    },
   },
   methods: {
     bytesToSize(bytes) {
@@ -224,7 +255,7 @@ export default {
 }
 .dashboard__profile_pics {
   border: 1px solid #f06723;
-  border-radius: 1em;
+  border-radius: 0.8em;
   object-fit: cover;
   padding: 0.3em;
   width: 50.21px;
@@ -233,7 +264,7 @@ export default {
 
 .dashboard__profile_pics img {
   background-color: #f06723;
-  border-radius: 1em;
+  border-radius: 0.8em;
   object-fit: cover;
   height: 100%;
   width: 100%;

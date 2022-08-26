@@ -86,19 +86,9 @@
       </div>
     </div>
     <!-- Edit Withdraw  sheet -->
-    <Sheet
-      v-slot="{ closeSelf }"
-      maxWidth="auto"
-      height="90%"
-      v-model:visible="isOpenRate"
-      :clickOutside="false"
-    >
+    <Sheet maxWidth="auto" height="90%" v-model:visible="isOpenRate">
       <!-- Withdraw sheetcontainer -->
       <div class="sheetcontainer">
-        <!-- Withdraw sheetclose -->
-        <h3 @click="closeSelf()" style="float: right">
-          <i class="fas fa-window-close" style="color: #f06723"></i>
-        </h3>
         <br />
         <br />
         <!-- Withdraw sheet header -->

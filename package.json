@@ -24,6 +24,7 @@
     "vue-loading-overlay": "5.0",
     "vue-plugin-load-script": "^2.1.1",
     "vue-router": "^4.0.3",
+    "vue3-rich-accordion": "^0.0.7",
     "vuex": "^4.0.2",
     "vuex-persistedstate": "^4.1.0"
   },

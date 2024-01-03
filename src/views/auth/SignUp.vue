@@ -94,7 +94,7 @@
             </button>
           </div>
           <!-- sign up with socials start here -->
-          <!-- <div class="signup with_account">or sign up with account</div>
+          <div class="signup with_account">or sign up with account</div>
           <div class="signup accounts">
             <button class="social">
               <i class="fab fa-google"></i>&nbsp; Google
@@ -102,7 +102,7 @@
             <button class="social">
               <i class="fab fa-facebook"></i>&nbsp; Facebook
             </button>
-          </div> -->
+          </div> 
           <!-- already have an account starts here -->
           <div class="signup">
             Already have an account ?&nbsp;
